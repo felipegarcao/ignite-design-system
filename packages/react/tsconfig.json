@@ -1,0 +1,6 @@
+{
+  "extends": "@upp-presentation/ts-config/react.json",
+  "include": [
+    "src"
+  ],
+}
