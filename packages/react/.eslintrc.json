@@ -1,0 +1,3 @@
+{
+  "extends": "@upp-presentation/eslint-config"
+}
