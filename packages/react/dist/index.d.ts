@@ -1,7 +1,11 @@
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
+import { ComponentProps } from 'react';
 
-declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {}, {}, _stitches_react_types_css_util.CSS<{}, {
+type ButtonProps = ComponentProps<typeof Button>;
+declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {
+    size?: "big" | "small" | undefined;
+}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
         readonly white: "#FFF";
         readonly black: "#000";
@@ -25,13 +29,13 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
         readonly md: "1rem";
         readonly lg: "1.125rem";
         readonly xl: "1.25rem";
-        readonly "2xl": "1.5rem";
-        readonly "4xl": "2rem";
-        readonly "5xl": "2.25rem";
-        readonly "6xl": "3rem";
-        readonly "7xl": "4rem";
-        readonly "8xl": "4.5rem";
-        readonly "9xl": "6rem";
+        readonly '2xl': "1.5rem";
+        readonly '4xl': "2rem";
+        readonly '5xl': "2.25rem";
+        readonly '6xl': "3rem";
+        readonly '7xl': "4rem";
+        readonly '8xl': "4.5rem";
+        readonly '9xl': "6rem";
     };
     fontWeights: {
         regular: string;
@@ -204,4 +208,4 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
     zIndex: "zIndices";
 }, {}>>;
 
-export { Button };
+export { Button, ButtonProps };
