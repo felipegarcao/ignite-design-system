@@ -13,15 +13,16 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
     "@upp-presentation/tokens": "*",
     "@upp-presentation/ts-config": "*",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
     "react": "^18.2.0",
     "tsup": "^6.5.0",
     "typescript": "^4.9.3"
   },
   "dependencies": {
     "@stitches/react": "^1.2.8"
+   
   }
 }

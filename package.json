@@ -9,5 +9,9 @@
   },
   "devDependencies": {
     "turbo": "^1.6.3"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.1",
+    "phosphor-react": "^1.4.1"
   }
 }
