@@ -1,6 +1,7 @@
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
-import { ComponentProps } from 'react';
+import { ComponentProps } from '@stitches/react';
+import { ElementType } from 'react';
 
 declare const Box: _stitches_react_types_styled_component.StyledComponent<"div", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -207,4 +208,11 @@ declare const Box: _stitches_react_types_styled_component.StyledComponent<"div",
 interface BoxProps extends ComponentProps<typeof Box> {
 }
 
-export { Box, BoxProps };
+declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", {
+    size?: "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl" | undefined;
+}, {}, _stitches_react_types_css_util.CSS<{}, {}, {}, {}>>;
+interface TextProps extends ComponentProps<typeof Text> {
+    as?: ElementType;
+}
+
+export { Box, BoxProps, Text, TextProps };
