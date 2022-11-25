@@ -28534,7 +28534,81 @@ module.exports = __toCommonJS(src_exports);
 
 // src/styles/index.ts
 var import_react = require("@stitches/react");
-var import_tokens = require("@upp-presentation/tokens");
+
+// ../tokens/dist/index.mjs
+var colors = {
+  white: "#FFF",
+  black: "#000",
+  gray100: "#E1E1E6",
+  gray200: "#A9A9B2",
+  gray400: "#7C7C8A",
+  gray500: "#505059",
+  gray600: "#323238",
+  gray700: "#29292E",
+  gray800: "#202024",
+  gray900: "#121214",
+  ignite300: "#00B37E",
+  ignite500: "#00875F",
+  ignite700: "#015F43",
+  ignite900: "#00291D"
+};
+var space = {
+  1: "0.25rem",
+  2: "0.5rem",
+  3: "0.75rem",
+  4: "1rem",
+  5: "1.25rem",
+  6: "1.5rem",
+  7: "1.75rem",
+  8: "2rem",
+  10: "2.5rem",
+  12: "3rem",
+  16: "4rem",
+  20: "5rem",
+  40: "10rem",
+  64: "16rem",
+  80: "20rem"
+};
+var radii = {
+  px: "1px",
+  xs: "4px",
+  sm: "6px",
+  md: "8px",
+  lg: "16px",
+  full: "99999px"
+};
+var fonts = {
+  default: "Roboto, sans-serif",
+  code: "monospace"
+};
+var fontSizes = {
+  xxs: "0.625rem",
+  xs: "0.75rem",
+  sm: "0.875rem",
+  md: "1rem",
+  lg: "1.125rem",
+  xl: "1.25rem",
+  "2xl": "1.5rem",
+  "4xl": "2rem",
+  "5xl": "2.25rem",
+  "6xl": "3rem",
+  "7xl": "4rem",
+  "8xl": "4.5rem",
+  "9xl": "6rem"
+};
+var fontWeights = {
+  regular: "400",
+  medium: "500",
+  bold: "700"
+};
+var lineHeights = {
+  shorter: "125%",
+  short: "140%",
+  base: "160%",
+  tall: "180%"
+};
+
+// src/styles/index.ts
 var {
   styled,
   css,
@@ -28550,13 +28624,13 @@ var {
     width: "space"
   }),
   theme: {
-    colors: import_tokens.colors,
-    fontSizes: import_tokens.fontSizes,
-    fontWeights: import_tokens.fontWeights,
-    fonts: import_tokens.fonts,
-    lineHeights: import_tokens.lineHeights,
-    radii: import_tokens.radii,
-    space: import_tokens.space
+    colors,
+    fontSizes,
+    fontWeights,
+    fonts,
+    lineHeights,
+    radii,
+    space
   }
 });
 
@@ -28621,6 +28695,181 @@ var Heading = (0, import_react3.styled)("h2", {
   }
 });
 
+// ../../node_modules/phosphor-react/dist/lib/index.esm.js
+var import_react4 = require("react");
+var IconContext = /* @__PURE__ */ (0, import_react4.createContext)({
+  color: "currentColor",
+  size: "1em",
+  weight: "regular",
+  mirrored: false
+});
+var renderPathForWeight = function renderPathForWeight2(weight, color, pathsByWeight2) {
+  var path = pathsByWeight2.get(weight);
+  if (!!path)
+    return path(color);
+  console.error('Unsupported icon weight. Choose from "thin", "light", "regular", "bold", "fill", or "duotone".');
+  return null;
+};
+
+// ../../node_modules/phosphor-react/dist/lib/IconBase.esm.js
+var import_react5 = __toESM(require("react"));
+
+// ../../node_modules/phosphor-react/dist/_virtual/_rollupPluginBabelHelpers.js
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null)
+    return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0)
+      continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+
+// ../../node_modules/phosphor-react/dist/lib/IconBase.esm.js
+var IconBase = /* @__PURE__ */ (0, import_react5.forwardRef)(function(props, ref) {
+  var alt = props.alt, color = props.color, size = props.size, weight = props.weight, mirrored = props.mirrored, children = props.children, renderPath3 = props.renderPath, restProps = _objectWithoutPropertiesLoose(props, ["alt", "color", "size", "weight", "mirrored", "children", "renderPath"]);
+  var _useContext = (0, import_react5.useContext)(IconContext), _useContext$color = _useContext.color, contextColor = _useContext$color === void 0 ? "currentColor" : _useContext$color, contextSize = _useContext.size, _useContext$weight = _useContext.weight, contextWeight = _useContext$weight === void 0 ? "regular" : _useContext$weight, _useContext$mirrored = _useContext.mirrored, contextMirrored = _useContext$mirrored === void 0 ? false : _useContext$mirrored, restContext = _objectWithoutPropertiesLoose(_useContext, ["color", "size", "weight", "mirrored"]);
+  return import_react5.default.createElement("svg", Object.assign({
+    ref,
+    xmlns: "http://www.w3.org/2000/svg",
+    width: size != null ? size : contextSize,
+    height: size != null ? size : contextSize,
+    fill: color != null ? color : contextColor,
+    viewBox: "0 0 256 256",
+    transform: mirrored || contextMirrored ? "scale(-1, 1)" : void 0
+  }, restContext, restProps), !!alt && import_react5.default.createElement("title", null, alt), children, import_react5.default.createElement("rect", {
+    width: "256",
+    height: "256",
+    fill: "none"
+  }), renderPath3(weight != null ? weight : contextWeight, color != null ? color : contextColor));
+});
+IconBase.displayName = "IconBase";
+var IconBase_esm_default = IconBase;
+
+// ../../node_modules/phosphor-react/dist/icons/User.esm.js
+var import_react6 = __toESM(require("react"));
+var pathsByWeight = /* @__PURE__ */ new Map();
+pathsByWeight.set("bold", function(color) {
+  return import_react6.default.createElement(import_react6.default.Fragment, null, import_react6.default.createElement("circle", {
+    cx: "128",
+    cy: "96",
+    r: "64",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "24"
+  }), import_react6.default.createElement("path", {
+    d: "M31,216a112,112,0,0,1,194,0",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "24"
+  }));
+});
+pathsByWeight.set("duotone", function(color) {
+  return import_react6.default.createElement(import_react6.default.Fragment, null, import_react6.default.createElement("circle", {
+    cx: "128",
+    cy: "96",
+    r: "64",
+    opacity: "0.2"
+  }), import_react6.default.createElement("circle", {
+    cx: "128",
+    cy: "96",
+    r: "64",
+    fill: "none",
+    stroke: color,
+    strokeMiterlimit: "10",
+    strokeWidth: "16"
+  }), import_react6.default.createElement("path", {
+    d: "M31,216a112,112,0,0,1,194,0",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "16"
+  }));
+});
+pathsByWeight.set("fill", function() {
+  return import_react6.default.createElement(import_react6.default.Fragment, null, import_react6.default.createElement("path", {
+    d: "M231.9,212a120.7,120.7,0,0,0-67.1-54.2,72,72,0,1,0-73.6,0A120.7,120.7,0,0,0,24.1,212a7.7,7.7,0,0,0,0,8,7.8,7.8,0,0,0,6.9,4H225a7.8,7.8,0,0,0,6.9-4A7.7,7.7,0,0,0,231.9,212Z"
+  }));
+});
+pathsByWeight.set("light", function(color) {
+  return import_react6.default.createElement(import_react6.default.Fragment, null, import_react6.default.createElement("circle", {
+    cx: "128",
+    cy: "96",
+    r: "64",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "12"
+  }), import_react6.default.createElement("path", {
+    d: "M31,216a112,112,0,0,1,194,0",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "12"
+  }));
+});
+pathsByWeight.set("thin", function(color) {
+  return import_react6.default.createElement(import_react6.default.Fragment, null, import_react6.default.createElement("circle", {
+    cx: "128",
+    cy: "96",
+    r: "64",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "8"
+  }), import_react6.default.createElement("path", {
+    d: "M31,216a112,112,0,0,1,194,0",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "8"
+  }));
+});
+pathsByWeight.set("regular", function(color) {
+  return import_react6.default.createElement(import_react6.default.Fragment, null, import_react6.default.createElement("circle", {
+    cx: "128",
+    cy: "96",
+    r: "64",
+    fill: "none",
+    stroke: color,
+    strokeMiterlimit: "10",
+    strokeWidth: "16"
+  }), import_react6.default.createElement("path", {
+    d: "M31,216a112,112,0,0,1,194,0",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "16"
+  }));
+});
+var renderPath = function renderPath2(weight, color) {
+  return renderPathForWeight(weight, color, pathsByWeight);
+};
+var User = /* @__PURE__ */ (0, import_react6.forwardRef)(function(props, ref) {
+  return import_react6.default.createElement(IconBase_esm_default, Object.assign({
+    ref
+  }, props, {
+    renderPath
+  }));
+});
+User.displayName = "User";
+var User_esm_default = User;
+
 // ../../node_modules/@babel/runtime/helpers/esm/extends.js
 function _extends() {
   _extends = Object.assign ? Object.assign.bind() : function(target) {
@@ -28638,14 +28887,14 @@ function _extends() {
 }
 
 // ../../node_modules/@radix-ui/react-avatar/dist/index.module.js
-var import_react10 = require("react");
+var import_react13 = require("react");
 
 // ../../node_modules/@radix-ui/react-context/dist/index.module.js
-var import_react4 = require("react");
+var import_react7 = require("react");
 function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeDeps = []) {
   let defaultContexts = [];
   function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultContext) {
-    const BaseContext = /* @__PURE__ */ (0, import_react4.createContext)(defaultContext);
+    const BaseContext = /* @__PURE__ */ (0, import_react7.createContext)(defaultContext);
     const index = defaultContexts.length;
     defaultContexts = [
       ...defaultContexts,
@@ -28654,17 +28903,17 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
     function Provider(props) {
       const _a = props, { scope, children } = _a, context = __objRest(_a, ["scope", "children"]);
       const Context = (scope === null || scope === void 0 ? void 0 : scope[scopeName][index]) || BaseContext;
-      const value = (0, import_react4.useMemo)(
+      const value = (0, import_react7.useMemo)(
         () => context,
         Object.values(context)
       );
-      return /* @__PURE__ */ (0, import_react4.createElement)(Context.Provider, {
+      return /* @__PURE__ */ (0, import_react7.createElement)(Context.Provider, {
         value
       }, children);
     }
     function useContext2(consumerName, scope) {
       const Context = (scope === null || scope === void 0 ? void 0 : scope[scopeName][index]) || BaseContext;
-      const context = (0, import_react4.useContext)(Context);
+      const context = (0, import_react7.useContext)(Context);
       if (context)
         return context;
       if (defaultContext !== void 0)
@@ -28679,11 +28928,11 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
   }
   const createScope = () => {
     const scopeContexts = defaultContexts.map((defaultContext) => {
-      return /* @__PURE__ */ (0, import_react4.createContext)(defaultContext);
+      return /* @__PURE__ */ (0, import_react7.createContext)(defaultContext);
     });
     return function useScope(scope) {
       const contexts = (scope === null || scope === void 0 ? void 0 : scope[scopeName]) || scopeContexts;
-      return (0, import_react4.useMemo)(
+      return (0, import_react7.useMemo)(
         () => ({
           [`__scope${scopeName}`]: __spreadProps(__spreadValues({}, scope), {
             [scopeName]: contexts
@@ -28719,7 +28968,7 @@ function $c512c27ab02ef895$var$composeContextScopes(...scopes) {
         const currentScope = scopeProps[`__scope${scopeName}`];
         return __spreadValues(__spreadValues({}, nextScopes), currentScope);
       }, {});
-      return (0, import_react4.useMemo)(
+      return (0, import_react7.useMemo)(
         () => ({
           [`__scope${baseScope.scopeName}`]: nextScopes1
         }),
@@ -28734,13 +28983,13 @@ function $c512c27ab02ef895$var$composeContextScopes(...scopes) {
 }
 
 // ../../node_modules/@radix-ui/react-use-callback-ref/dist/index.module.js
-var import_react5 = require("react");
+var import_react8 = require("react");
 function $b1b2314f5f9a1d84$export$25bec8c6f54ee79a(callback) {
-  const callbackRef = (0, import_react5.useRef)(callback);
-  (0, import_react5.useEffect)(() => {
+  const callbackRef = (0, import_react8.useRef)(callback);
+  (0, import_react8.useEffect)(() => {
     callbackRef.current = callback;
   });
-  return (0, import_react5.useMemo)(
+  return (0, import_react8.useMemo)(
     () => (...args) => {
       var _callbackRef$current;
       return (_callbackRef$current = callbackRef.current) === null || _callbackRef$current === void 0 ? void 0 : _callbackRef$current.call(callbackRef, ...args);
@@ -28750,19 +28999,19 @@ function $b1b2314f5f9a1d84$export$25bec8c6f54ee79a(callback) {
 }
 
 // ../../node_modules/@radix-ui/react-use-layout-effect/dist/index.module.js
-var import_react6 = require("react");
-var $9f79659886946c16$export$e5c5a5f917a5871c = Boolean(globalThis === null || globalThis === void 0 ? void 0 : globalThis.document) ? import_react6.useLayoutEffect : () => {
+var import_react9 = require("react");
+var $9f79659886946c16$export$e5c5a5f917a5871c = Boolean(globalThis === null || globalThis === void 0 ? void 0 : globalThis.document) ? import_react9.useLayoutEffect : () => {
 };
 
 // ../../node_modules/@radix-ui/react-primitive/dist/index.module.js
-var import_react9 = require("react");
+var import_react12 = require("react");
 var import_react_dom = __toESM(require_react_dom());
 
 // ../../node_modules/@radix-ui/react-slot/dist/index.module.js
-var import_react8 = require("react");
+var import_react11 = require("react");
 
 // ../../node_modules/@radix-ui/react-compose-refs/dist/index.module.js
-var import_react7 = require("react");
+var import_react10 = require("react");
 function $6ed0406888f73fc4$var$setRef(ref, value) {
   if (typeof ref === "function")
     ref(value);
@@ -28776,43 +29025,43 @@ function $6ed0406888f73fc4$export$43e446d32b3d21af(...refs) {
 }
 
 // ../../node_modules/@radix-ui/react-slot/dist/index.module.js
-var $5e63c961fc1ce211$export$8c6ed5c666ac1360 = /* @__PURE__ */ (0, import_react8.forwardRef)((props, forwardedRef) => {
+var $5e63c961fc1ce211$export$8c6ed5c666ac1360 = /* @__PURE__ */ (0, import_react11.forwardRef)((props, forwardedRef) => {
   const _a = props, { children } = _a, slotProps = __objRest(_a, ["children"]);
-  const childrenArray = import_react8.Children.toArray(children);
+  const childrenArray = import_react11.Children.toArray(children);
   const slottable = childrenArray.find($5e63c961fc1ce211$var$isSlottable);
   if (slottable) {
     const newElement = slottable.props.children;
     const newChildren = childrenArray.map((child) => {
       if (child === slottable) {
-        if (import_react8.Children.count(newElement) > 1)
-          return import_react8.Children.only(null);
-        return /* @__PURE__ */ (0, import_react8.isValidElement)(newElement) ? newElement.props.children : null;
+        if (import_react11.Children.count(newElement) > 1)
+          return import_react11.Children.only(null);
+        return /* @__PURE__ */ (0, import_react11.isValidElement)(newElement) ? newElement.props.children : null;
       } else
         return child;
     });
-    return /* @__PURE__ */ (0, import_react8.createElement)($5e63c961fc1ce211$var$SlotClone, _extends({}, slotProps, {
+    return /* @__PURE__ */ (0, import_react11.createElement)($5e63c961fc1ce211$var$SlotClone, _extends({}, slotProps, {
       ref: forwardedRef
-    }), /* @__PURE__ */ (0, import_react8.isValidElement)(newElement) ? /* @__PURE__ */ (0, import_react8.cloneElement)(newElement, void 0, newChildren) : null);
+    }), /* @__PURE__ */ (0, import_react11.isValidElement)(newElement) ? /* @__PURE__ */ (0, import_react11.cloneElement)(newElement, void 0, newChildren) : null);
   }
-  return /* @__PURE__ */ (0, import_react8.createElement)($5e63c961fc1ce211$var$SlotClone, _extends({}, slotProps, {
+  return /* @__PURE__ */ (0, import_react11.createElement)($5e63c961fc1ce211$var$SlotClone, _extends({}, slotProps, {
     ref: forwardedRef
   }), children);
 });
 $5e63c961fc1ce211$export$8c6ed5c666ac1360.displayName = "Slot";
-var $5e63c961fc1ce211$var$SlotClone = /* @__PURE__ */ (0, import_react8.forwardRef)((props, forwardedRef) => {
+var $5e63c961fc1ce211$var$SlotClone = /* @__PURE__ */ (0, import_react11.forwardRef)((props, forwardedRef) => {
   const _a = props, { children } = _a, slotProps = __objRest(_a, ["children"]);
-  if (/* @__PURE__ */ (0, import_react8.isValidElement)(children))
-    return /* @__PURE__ */ (0, import_react8.cloneElement)(children, __spreadProps(__spreadValues({}, $5e63c961fc1ce211$var$mergeProps(slotProps, children.props)), {
+  if (/* @__PURE__ */ (0, import_react11.isValidElement)(children))
+    return /* @__PURE__ */ (0, import_react11.cloneElement)(children, __spreadProps(__spreadValues({}, $5e63c961fc1ce211$var$mergeProps(slotProps, children.props)), {
       ref: $6ed0406888f73fc4$export$43e446d32b3d21af(forwardedRef, children.ref)
     }));
-  return import_react8.Children.count(children) > 1 ? import_react8.Children.only(null) : null;
+  return import_react11.Children.count(children) > 1 ? import_react11.Children.only(null) : null;
 });
 $5e63c961fc1ce211$var$SlotClone.displayName = "SlotClone";
 var $5e63c961fc1ce211$export$d9f1ccf0bdb05d45 = ({ children }) => {
-  return /* @__PURE__ */ (0, import_react8.createElement)(import_react8.Fragment, null, children);
+  return /* @__PURE__ */ (0, import_react11.createElement)(import_react11.Fragment, null, children);
 };
 function $5e63c961fc1ce211$var$isSlottable(child) {
-  return /* @__PURE__ */ (0, import_react8.isValidElement)(child) && child.type === $5e63c961fc1ce211$export$d9f1ccf0bdb05d45;
+  return /* @__PURE__ */ (0, import_react11.isValidElement)(child) && child.type === $5e63c961fc1ce211$export$d9f1ccf0bdb05d45;
 }
 function $5e63c961fc1ce211$var$mergeProps(slotProps, childProps) {
   const overrideProps = __spreadValues({}, childProps);
@@ -28857,13 +29106,13 @@ var $8927f6f2acc4f386$var$NODES = [
   "ul"
 ];
 var $8927f6f2acc4f386$export$250ffa63cdc0d034 = $8927f6f2acc4f386$var$NODES.reduce((primitive, node) => {
-  const Node = /* @__PURE__ */ (0, import_react9.forwardRef)((props, forwardedRef) => {
+  const Node = /* @__PURE__ */ (0, import_react12.forwardRef)((props, forwardedRef) => {
     const _a = props, { asChild } = _a, primitiveProps = __objRest(_a, ["asChild"]);
     const Comp = asChild ? $5e63c961fc1ce211$export$8c6ed5c666ac1360 : node;
-    (0, import_react9.useEffect)(() => {
+    (0, import_react12.useEffect)(() => {
       window[Symbol.for("radix-ui")] = true;
     }, []);
-    return /* @__PURE__ */ (0, import_react9.createElement)(Comp, _extends({}, primitiveProps, {
+    return /* @__PURE__ */ (0, import_react12.createElement)(Comp, _extends({}, primitiveProps, {
       ref: forwardedRef
     }));
   });
@@ -28877,19 +29126,19 @@ var $8927f6f2acc4f386$export$250ffa63cdc0d034 = $8927f6f2acc4f386$var$NODES.redu
 var $cddcb0b647441e34$var$AVATAR_NAME = "Avatar";
 var [$cddcb0b647441e34$var$createAvatarContext, $cddcb0b647441e34$export$90370d16b488820f] = $c512c27ab02ef895$export$50c7b4e9d9f19c1($cddcb0b647441e34$var$AVATAR_NAME);
 var [$cddcb0b647441e34$var$AvatarProvider, $cddcb0b647441e34$var$useAvatarContext] = $cddcb0b647441e34$var$createAvatarContext($cddcb0b647441e34$var$AVATAR_NAME);
-var $cddcb0b647441e34$export$e2255cf6045e8d47 = /* @__PURE__ */ (0, import_react10.forwardRef)((props, forwardedRef) => {
+var $cddcb0b647441e34$export$e2255cf6045e8d47 = /* @__PURE__ */ (0, import_react13.forwardRef)((props, forwardedRef) => {
   const _a = props, { __scopeAvatar } = _a, avatarProps = __objRest(_a, ["__scopeAvatar"]);
-  const [imageLoadingStatus, setImageLoadingStatus] = (0, import_react10.useState)("idle");
-  return /* @__PURE__ */ (0, import_react10.createElement)($cddcb0b647441e34$var$AvatarProvider, {
+  const [imageLoadingStatus, setImageLoadingStatus] = (0, import_react13.useState)("idle");
+  return /* @__PURE__ */ (0, import_react13.createElement)($cddcb0b647441e34$var$AvatarProvider, {
     scope: __scopeAvatar,
     imageLoadingStatus,
     onImageLoadingStatusChange: setImageLoadingStatus
-  }, /* @__PURE__ */ (0, import_react10.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.span, _extends({}, avatarProps, {
+  }, /* @__PURE__ */ (0, import_react13.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.span, _extends({}, avatarProps, {
     ref: forwardedRef
   })));
 });
 var $cddcb0b647441e34$var$IMAGE_NAME = "AvatarImage";
-var $cddcb0b647441e34$export$2cd8ae1985206fe8 = /* @__PURE__ */ (0, import_react10.forwardRef)((props, forwardedRef) => {
+var $cddcb0b647441e34$export$2cd8ae1985206fe8 = /* @__PURE__ */ (0, import_react13.forwardRef)((props, forwardedRef) => {
   const _a = props, { __scopeAvatar, src, onLoadingStatusChange = () => {
   } } = _a, imageProps = __objRest(_a, ["__scopeAvatar", "src", "onLoadingStatusChange"]);
   const context = $cddcb0b647441e34$var$useAvatarContext($cddcb0b647441e34$var$IMAGE_NAME, __scopeAvatar);
@@ -28905,17 +29154,17 @@ var $cddcb0b647441e34$export$2cd8ae1985206fe8 = /* @__PURE__ */ (0, import_react
     imageLoadingStatus,
     handleLoadingStatusChange
   ]);
-  return imageLoadingStatus === "loaded" ? /* @__PURE__ */ (0, import_react10.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.img, _extends({}, imageProps, {
+  return imageLoadingStatus === "loaded" ? /* @__PURE__ */ (0, import_react13.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.img, _extends({}, imageProps, {
     ref: forwardedRef,
     src
   })) : null;
 });
 var $cddcb0b647441e34$var$FALLBACK_NAME = "AvatarFallback";
-var $cddcb0b647441e34$export$69fffb6a9571fbfe = /* @__PURE__ */ (0, import_react10.forwardRef)((props, forwardedRef) => {
+var $cddcb0b647441e34$export$69fffb6a9571fbfe = /* @__PURE__ */ (0, import_react13.forwardRef)((props, forwardedRef) => {
   const _a = props, { __scopeAvatar, delayMs } = _a, fallbackProps = __objRest(_a, ["__scopeAvatar", "delayMs"]);
   const context = $cddcb0b647441e34$var$useAvatarContext($cddcb0b647441e34$var$FALLBACK_NAME, __scopeAvatar);
-  const [canRender, setCanRender] = (0, import_react10.useState)(delayMs === void 0);
-  (0, import_react10.useEffect)(() => {
+  const [canRender, setCanRender] = (0, import_react13.useState)(delayMs === void 0);
+  (0, import_react13.useEffect)(() => {
     if (delayMs !== void 0) {
       const timerId = window.setTimeout(
         () => setCanRender(true),
@@ -28926,13 +29175,13 @@ var $cddcb0b647441e34$export$69fffb6a9571fbfe = /* @__PURE__ */ (0, import_react
   }, [
     delayMs
   ]);
-  return canRender && context.imageLoadingStatus !== "loaded" ? /* @__PURE__ */ (0, import_react10.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.span, _extends({}, fallbackProps, {
+  return canRender && context.imageLoadingStatus !== "loaded" ? /* @__PURE__ */ (0, import_react13.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.span, _extends({}, fallbackProps, {
     ref: forwardedRef
   })) : null;
 });
 function $cddcb0b647441e34$var$useImageLoadingStatus(src) {
-  const [loadingStatus, setLoadingStatus] = (0, import_react10.useState)("idle");
-  (0, import_react10.useEffect)(() => {
+  const [loadingStatus, setLoadingStatus] = (0, import_react13.useState)("idle");
+  (0, import_react13.useEffect)(() => {
     if (!src) {
       setLoadingStatus("error");
       return;
@@ -28987,181 +29236,6 @@ var AvatarFallback = styled($cddcb0b647441e34$export$fb8d7f40caaeea67, {
     height: "$6"
   }
 });
-
-// ../../node_modules/phosphor-react/dist/lib/index.esm.js
-var import_react11 = require("react");
-var IconContext = /* @__PURE__ */ (0, import_react11.createContext)({
-  color: "currentColor",
-  size: "1em",
-  weight: "regular",
-  mirrored: false
-});
-var renderPathForWeight = function renderPathForWeight2(weight, color, pathsByWeight2) {
-  var path = pathsByWeight2.get(weight);
-  if (!!path)
-    return path(color);
-  console.error('Unsupported icon weight. Choose from "thin", "light", "regular", "bold", "fill", or "duotone".');
-  return null;
-};
-
-// ../../node_modules/phosphor-react/dist/lib/IconBase.esm.js
-var import_react12 = __toESM(require("react"));
-
-// ../../node_modules/phosphor-react/dist/_virtual/_rollupPluginBabelHelpers.js
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null)
-    return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0)
-      continue;
-    target[key] = source[key];
-  }
-  return target;
-}
-
-// ../../node_modules/phosphor-react/dist/lib/IconBase.esm.js
-var IconBase = /* @__PURE__ */ (0, import_react12.forwardRef)(function(props, ref) {
-  var alt = props.alt, color = props.color, size = props.size, weight = props.weight, mirrored = props.mirrored, children = props.children, renderPath3 = props.renderPath, restProps = _objectWithoutPropertiesLoose(props, ["alt", "color", "size", "weight", "mirrored", "children", "renderPath"]);
-  var _useContext = (0, import_react12.useContext)(IconContext), _useContext$color = _useContext.color, contextColor = _useContext$color === void 0 ? "currentColor" : _useContext$color, contextSize = _useContext.size, _useContext$weight = _useContext.weight, contextWeight = _useContext$weight === void 0 ? "regular" : _useContext$weight, _useContext$mirrored = _useContext.mirrored, contextMirrored = _useContext$mirrored === void 0 ? false : _useContext$mirrored, restContext = _objectWithoutPropertiesLoose(_useContext, ["color", "size", "weight", "mirrored"]);
-  return import_react12.default.createElement("svg", Object.assign({
-    ref,
-    xmlns: "http://www.w3.org/2000/svg",
-    width: size != null ? size : contextSize,
-    height: size != null ? size : contextSize,
-    fill: color != null ? color : contextColor,
-    viewBox: "0 0 256 256",
-    transform: mirrored || contextMirrored ? "scale(-1, 1)" : void 0
-  }, restContext, restProps), !!alt && import_react12.default.createElement("title", null, alt), children, import_react12.default.createElement("rect", {
-    width: "256",
-    height: "256",
-    fill: "none"
-  }), renderPath3(weight != null ? weight : contextWeight, color != null ? color : contextColor));
-});
-IconBase.displayName = "IconBase";
-var IconBase_esm_default = IconBase;
-
-// ../../node_modules/phosphor-react/dist/icons/User.esm.js
-var import_react13 = __toESM(require("react"));
-var pathsByWeight = /* @__PURE__ */ new Map();
-pathsByWeight.set("bold", function(color) {
-  return import_react13.default.createElement(import_react13.default.Fragment, null, import_react13.default.createElement("circle", {
-    cx: "128",
-    cy: "96",
-    r: "64",
-    fill: "none",
-    stroke: color,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "24"
-  }), import_react13.default.createElement("path", {
-    d: "M31,216a112,112,0,0,1,194,0",
-    fill: "none",
-    stroke: color,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "24"
-  }));
-});
-pathsByWeight.set("duotone", function(color) {
-  return import_react13.default.createElement(import_react13.default.Fragment, null, import_react13.default.createElement("circle", {
-    cx: "128",
-    cy: "96",
-    r: "64",
-    opacity: "0.2"
-  }), import_react13.default.createElement("circle", {
-    cx: "128",
-    cy: "96",
-    r: "64",
-    fill: "none",
-    stroke: color,
-    strokeMiterlimit: "10",
-    strokeWidth: "16"
-  }), import_react13.default.createElement("path", {
-    d: "M31,216a112,112,0,0,1,194,0",
-    fill: "none",
-    stroke: color,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "16"
-  }));
-});
-pathsByWeight.set("fill", function() {
-  return import_react13.default.createElement(import_react13.default.Fragment, null, import_react13.default.createElement("path", {
-    d: "M231.9,212a120.7,120.7,0,0,0-67.1-54.2,72,72,0,1,0-73.6,0A120.7,120.7,0,0,0,24.1,212a7.7,7.7,0,0,0,0,8,7.8,7.8,0,0,0,6.9,4H225a7.8,7.8,0,0,0,6.9-4A7.7,7.7,0,0,0,231.9,212Z"
-  }));
-});
-pathsByWeight.set("light", function(color) {
-  return import_react13.default.createElement(import_react13.default.Fragment, null, import_react13.default.createElement("circle", {
-    cx: "128",
-    cy: "96",
-    r: "64",
-    fill: "none",
-    stroke: color,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "12"
-  }), import_react13.default.createElement("path", {
-    d: "M31,216a112,112,0,0,1,194,0",
-    fill: "none",
-    stroke: color,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "12"
-  }));
-});
-pathsByWeight.set("thin", function(color) {
-  return import_react13.default.createElement(import_react13.default.Fragment, null, import_react13.default.createElement("circle", {
-    cx: "128",
-    cy: "96",
-    r: "64",
-    fill: "none",
-    stroke: color,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "8"
-  }), import_react13.default.createElement("path", {
-    d: "M31,216a112,112,0,0,1,194,0",
-    fill: "none",
-    stroke: color,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "8"
-  }));
-});
-pathsByWeight.set("regular", function(color) {
-  return import_react13.default.createElement(import_react13.default.Fragment, null, import_react13.default.createElement("circle", {
-    cx: "128",
-    cy: "96",
-    r: "64",
-    fill: "none",
-    stroke: color,
-    strokeMiterlimit: "10",
-    strokeWidth: "16"
-  }), import_react13.default.createElement("path", {
-    d: "M31,216a112,112,0,0,1,194,0",
-    fill: "none",
-    stroke: color,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "16"
-  }));
-});
-var renderPath = function renderPath2(weight, color) {
-  return renderPathForWeight(weight, color, pathsByWeight);
-};
-var User = /* @__PURE__ */ (0, import_react13.forwardRef)(function(props, ref) {
-  return import_react13.default.createElement(IconBase_esm_default, Object.assign({
-    ref
-  }, props, {
-    renderPath
-  }));
-});
-User.displayName = "User";
-var User_esm_default = User;
 
 // src/components/Avatar/index.tsx
 var import_jsx_runtime = require("react/jsx-runtime");
